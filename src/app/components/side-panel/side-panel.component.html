@@ -1,0 +1,31 @@
+<div class="main-container">
+    <div class="side-panel-header">
+        <h3>Welcome</h3>
+        
+    </div>
+    <div class="" *ngFor="let menu of menusFormat; let i = index;">
+        <div *ngIf="!menu.subMenu" class="link-container">
+            <a routerLink="{{menu.link}}" routerLinkActive="active">
+                <span class="menu-main-link">
+                    <i class="fa {{menu.icon}} "></i>
+                    <span> {{menu.name}} </span>
+                </span>
+            </a>
+        </div>
+        <div *ngIf="menu.subMenu" class="link-container">
+            <span class="menu-main-link" (click)="toggle(i)" [ngClass]="{'sub-menu-open': menu.subMenuOpen}" >
+                <i class="fa {{menu.icon}} "></i>
+                <span> {{menu.name}} </span>
+            </span>
+            <div [@subMenuState]="showAccordion" class="sub-menu-container">
+                <div *ngFor="let subMenu of menu.subMenuOptions" class="link-container submenu">
+                    <a routerLink="{{subMenu.link}}" routerLinkActive="active">
+                        <span class="submenu-main-link">
+                            <span> {{subMenu.name}} </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

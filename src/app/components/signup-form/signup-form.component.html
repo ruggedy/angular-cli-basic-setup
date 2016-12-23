@@ -1,0 +1,27 @@
+<div class="main-container">
+    <md-card class="card-reset">
+        <md-toolbar color="primary" >{{Title}}</md-toolbar>
+        <md-card-content>
+            <form [formGroup]="form" (ngSubmit)="submit(form)" >
+                <md-input formControlName="username" class="full-width" placeholder="Username" >
+                    <span *ngIf="form.controls.username.valid && showConfirm" md-suffix ><md-icon class="primary" fontSet="fa" fontIcon="fa-check" ></md-icon></span>
+                </md-input>
+                <div *ngIf="form.controls.username.errors && form.controls.username.touched && form.controls.username.dirty">
+                    <small *ngIf="form.controls.username.errors.usernameTaken"> Username is Taken </small>
+                    <small *ngIf="form.controls.username.errors.minlength"> length must exceed 6</small>
+                    <small *ngIf="form.controls.username.errors.maxlength"> length must not exceed 100</small>
+                </div>
+                <md-input formControlName="password" type="password" class="full-width" placeholder="Password"></md-input>
+                <div *ngIf="form.controls.password.dirty && form.controls.password.errors && form.controls.password.touched">
+                    <small *ngIf="form.controls.password.errors.minlength" > length must exceed 6 </small>
+                    <small *ngIf="form.controls.password.errors.maxlength">length must not exceed 100</small>
+                </div>
+                <md-input formControlName="confirmPassword" type="password" *ngIf="showConfirm()" class="full-width" placeholder="Confirm Password"></md-input>
+                <div *ngIf="form.controls.confirmPassword.dirty && form.errors && form.controls.confirmPassword.touched">
+                    <small *ngIf="form.errors.isInValid" > Password Mismatch </small>
+                </div>
+                <div class="button-container"><button md-raised-button type="submit" color="primary" >{{Title}}</button></div>
+            </form>
+        </md-card-content>
+    </md-card>
+</div>

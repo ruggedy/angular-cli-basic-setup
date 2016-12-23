@@ -1,0 +1,65 @@
+@import '../../../variables';
+
+.main-container {
+    width: 100%;
+    position: relative;
+}
+
+.side-panel{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    background-color: $primary-color;
+}
+
+.page-content {
+    margin-left: 250px;
+}
+
+.router-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-link-container {
+	text-decoration: none;
+	color: $primary-color-text;
+	cursor: pointer;
+    font-size: .8em;
+    font-weight: bold;
+	padding: 15px 30px;
+	width: 100%;
+	transition: all 400ms ease-in-out;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-link-container:hover {
+	background-color: $primary-color-dark;
+}
+
+.accordionOpen {
+    background-color: $primary-color-dark;
+}
+
+.clickable {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.toolbar-text {
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+img {
+    margin-left: 15px;
+    margin-right: 20px;
+}

@@ -1,0 +1,29 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+md-card-title {
+    font-size: 16px;
+}
+
+md-card-subtitle {
+    font-size: 12px;
+}
+
+md-card-content {
+    font-size: 12px;
+}
+
+.chevron {
+    color: rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+}
+
+.font-size-16 {
+    font-size: 12px;
+}
+
+.index-position{
+    z-index: -100;
+}

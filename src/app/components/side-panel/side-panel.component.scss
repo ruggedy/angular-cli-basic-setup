@@ -1,0 +1,80 @@
+@import '../../../variables';
+:host {
+    display: flex;
+    flex-direction: column;
+
+}
+.submenu-main-link,
+.menu-main-link{
+    width: 100%;
+    display: flex;
+    padding: 15px 0px 15px 27px;
+    color: $primary-color-text;
+    cursor: pointer;
+    align-items: center;
+    z-index: 20; 
+}
+
+.submenu-main-link {
+    padding: 0;
+    z-index: -99;
+    height: 50px;
+}
+
+.menu-main-link:hover {
+    background-color: $primary-color-dark;
+}
+
+i {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color-text;
+}
+
+.link-container {
+    border-top: 1px solid $divider-color;
+}
+
+.link-container.submenu {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    border-top: none;
+    flex-wrap: wrap;
+}
+
+a.active .menu-main-link {
+    border-right: 5px solid $accent-color;
+    
+}
+
+.link-container.submenu a.active .submenu-main-link {
+    border-right: none;
+    color: $accent-color;
+}
+
+.sub-menu-open {
+    background-color: $primary-color-dark;
+}
+
+.sub-menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    z-index: -99;
+}
+
+.side-panel-header {
+    height: 150px;
+    width: 100%;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+}

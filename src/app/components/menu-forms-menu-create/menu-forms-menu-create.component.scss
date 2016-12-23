@@ -1,0 +1,10 @@
+@import '../../../variables';
+
+.menu-options {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.allergies-options .selected, 
+.menu-options .selected {
+    color: $accent-color;
+}

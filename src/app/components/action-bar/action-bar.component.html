@@ -1,0 +1,10 @@
+<md-toolbar color="primary" align="end">
+    <span class="input-width">
+        <md-input [placeholder]="'Search'" [(ngModel)]="searchTerm" (keyup)="handleSelected($event, 'search')" >
+            <span md-suffix ><i class="fa fa-search"></i></span>
+        </md-input>
+    </span>
+    <span class="fill-remaining"></span>
+    <span class="select-width"><ng-select [placeholder]="'ALL'" [items]="categories" (selected)="handleSelected($event, 'category')"  ></ng-select></span>
+    <span class="select-width"><ng-select [placeholder]="'ALL'" [items]="allergens" (selected)="handleSelected($event, 'allergens')"></ng-select></span>
+</md-toolbar>

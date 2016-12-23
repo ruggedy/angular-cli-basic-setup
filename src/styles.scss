@@ -1,0 +1,327 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+/* Reset */
+html,
+body,
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+[class^= 'col-'],
+[class*= 'col-'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Box-sizing border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Set up a default font and some padding to provide breathing room */
+body {
+  font-family: 'Lato', Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fdfdfd;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+ul {
+  margin: 10px 0 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+
+div.ui-editor-toolbar{
+	display: none;
+}
+
+.carousel-control{
+	display: none;
+}
+
+.carousel-indicators{
+	display: none;
+}
+
+// Category Icon
+
+
+md-toolbar{
+	min-height: 35px !important;
+	font-size: 1.1em
+}
+
+
+md-toolbar.small-toolbar md-toolbar-row{
+	height: 40px !important;
+}
+
+[md-raised-button], [md-fab], [md-mini-fab], [md-button], [md-icon-button] {
+    min-width: 2px !important;
+}
+
+.masonry-layout{
+    column-count: 3;
+    column-gap: 0;
+}
+
+.masonry-layout__panel {
+    break-inside: avoid;
+}
+
+.Grid--gutters {
+  margin: -1em 0 0 -1em;
+}
+.Grid--gutters > [class^="dw-panel"],
+.Grid--gutters > [class*="dw-panel"],
+.Grid--gutters > [class^="dw-cluster__segment"],
+.Grid--gutters > [class*="dw-cluster__segment"],
+.Grid--gutters > [class^="col-"],
+.Grid--gutters>  [class*=" col-"] {
+  padding: 1em 0 0 1em;
+}
+
+.small.Grid--gutters {
+  margin: -0.5em 0 0 -0.5em;
+}
+.small.Grid--gutters > [class^="col-"],
+.small.Grid--gutters>  [class*=" col-"] {
+  padding: .5em 0 0 .5em;
+}
+
+.smallest.Grid--gutters {
+  margin: -2px 0 0 -2px;
+}
+.smallest.Grid--gutters > [class^="col-"],
+.smallest.Grid--gutters>  [class*=" col-"] {
+  padding: 2px 0 0 2px;
+}
+
+.md-sidenav-content{
+	    transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+
+.custom-md-toolbar{
+	color: $primary-color-light;
+	font-size: 1em;
+	height: 55px;
+	font-weight: bold;
+    border: 1px solid #E6E6E6;
+	border-bottom: 1px solid transparent;
+}
+
+.custom-md-toolbar md-toolbar-row{
+	height: 55px;
+}
+
+.custom-md-toolbar.small {
+  height: 40px;
+  font-size: 1em;
+  color: $accent-color;
+}
+
+.custom-md-toolbar.small md-toolbar-row{
+  height: 40px;
+}
+
+.image-container{
+	display: flex;
+    position: relative;
+	width: 100%;
+	overflow: hidden;
+	justify-content: center;
+	align-items: flex-start;
+  color: $primary-text-color;
+
+}
+
+.md-tab-label.md-tab-active{
+    background-color: $primary-color !important;
+    color: white !important;
+    opacity: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.card-reset {
+    padding: 0;
+}
+
+
+.card-reset md-card-content,
+.card-reset med-card-actions {
+    padding: 24px;
+}
+
+.fill-remaining{
+    flex: 1 1 auto;
+}
+
+.half-width{
+    width: 50%;
+}
+
+.alone {
+    margin-right: auto;
+    margin-left: auto;
+}
+.alone.left{
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.alone.right{
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-section-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.38;
+}
+
+.form-section-header.lighter{
+    color: white;
+    opacity: 0.5;
+}
+
+.form-section-seperator {
+    margin: 10px 0;
+}
+
+.col-md-15 {
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+.col-md-15 {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    max-width: 20%;
+  }
+
+
+// Pagination
+
+.pagination-container {
+    display: inline-block;
+}
+
+.custom-pagination {
+    display: inline-block;
+}
+
+.input-width md-input .md-input-table {
+    font-size: 16px;
+}
+
+.custom-pagination .pagination-previous, 
+.custom-pagination .pagination-next {
+    display: inline-block;
+    color: $primary-color;
+    width: 3em;
+    height: 2em;
+    border: 1px solid #e7ecf1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    padding-top: .2em;
+    margin-right: -0.3em;
+}
+
+.custom-pagination .pagination-previous a, 
+.custom-pagination .pagination-next a {
+    cursor: pointer;
+    color: $primary-color;
+}
+
+.custom-pagination .pagination-next {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-right: 0em;
+    margin-left: -0.3em;
+}
+
+.custom-pagination .pages {
+    display: inline-block;
+    color: $primary-color;
+    width: 3em;
+    height: 2em;
+    border: 1px solid #e7ecf1;
+    text-align: center;
+    padding-top: .2em;
+    font-weight: bold;
+}
+
+.custom-pagination .pages.current {
+    background-color: $primary-color;
+    color: #f5f5f5;
+    border-color: $primary-color;
+}
+
+.custom-pagination .pages a {
+    cursor: pointer;
+    color: $primary-color;
+}
+
+app-restaurant-user .main-container {
+    background-color: $Blue !important;
+    color: white;
+}
+
+app-restaurant-opening .main-container {
+    background-color: $Indigo !important;
+    color: white;
+}
+
+app-restaurant-locations .main-container {
+    background-color: $Deep_Purple !important;
+    color: white;
+}
+
+app-restaurant-opening.odd .main-container {
+    background-color: $Deep-Orange !important;
+}

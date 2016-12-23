@@ -1,0 +1,176 @@
+@import '../../../variables';
+
+.custom-container {
+    padding-left: auto;
+    padding-right: auto;
+}
+
+md-card {
+    height: auto;
+}
+/*card-title*/
+
+/*--- button-color ---*/
+
+
+/*-- footer design --*/
+
+md-card-footer {
+    
+}
+
+md-card-footer button {
+    float: right;
+    background-color: #d9534f;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*--- table-design ---*/
+
+.item-name {
+    text-decoration: none;
+    color: $primary-color;
+}
+
+table{
+    border: 1px solid #e7ecf1;
+    width: 100%;
+}
+
+table thead tr{
+    width: 100%;
+}
+
+table thead tr>th {
+    line-height: 1.42857;
+    font-size: .9em;
+    font-weight: 600;
+    padding: .6em .4em .6em 1em;
+    border: 1px solid #e7ecf1;
+}
+
+table tbody tr {
+    background-color: #ffffff;
+    height: 1em;
+    position: relative;
+}
+
+table tbody tr:nth-last-of-type(even) {
+    background-color: whitesmoke;
+}
+
+table tbody tr>td {
+    border: 1px solid #e7ecf1;
+    padding-left: .7em;
+    vertical-align: top;
+    padding: .5em .9em;
+}
+
+table tbody tr>td:first-child {
+    position: relative;
+}
+
+table tbody tr>td:first-child md-checkbox {
+    position: absolute;
+    top: -0.5em;
+}
+
+table tbody tr>td>a{
+    cursor: pointer;
+}
+
+table tbody tr>td:last-of-type>a{
+    color: #d9534f;
+}
+
+/*--- custom-pagination ---*/
+
+.content-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    width: 100%;
+}
+
+
+
+/*--- responsive ---*/
+
+@media only screen and (max-width: 600px) {
+    button {
+        margin-bottom: 1em;
+    }
+   
+   md-card-content {
+        height: auto;
+        margin-bottom: 3em;
+    }
+    
+    md-card-title h2 {
+        font-size: 1em;
+    }
+
+    md-card-content {
+        height: auto;
+    }
+    
+   
+    table {
+        margin: 1em 0;
+        width: 100%;
+        border: none;
+    }
+
+    md-card {
+        margin: 0 0em;
+    }
+    
+    table tbody tr {
+        height: 5em;
+    }
+    table tbody tr>td {
+        border: none;
+        vertical-align: top;
+        padding: 0em 0em;
+    }
+
+    table tbody tr>td:first-child {
+        padding-top: 1.5em;
+    }
+
+    table tbody tr>td:last-child {
+        padding-bottom: 1.5em;
+    }
+    table th {
+        display: none;
+    }
+
+    table td {
+        display: block;
+        font-size: .9em;
+    }
+
+    table td:first-child {
+        display: none;
+
+    }
+
+    table td:last-child {
+        padding-bottom: 1em;
+    }
+
+    table td:before {
+        content: attr(data-th) ": ";
+        font-weight: bold;
+        width: 6.5em;
+        display: inline-block;
+    }
+
+    table th, table td {
+        text-align: left;
+    }
+
+
+}

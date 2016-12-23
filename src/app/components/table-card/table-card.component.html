@@ -1,0 +1,51 @@
+<div class="custom-container">
+    <md-card class="card-reset">
+        <md-toolbar>{{title}}</md-toolbar>
+        <md-card-content>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Options</th>
+                        <th>No of Allergens</th>
+                        <th>No of Blacklist Allergens</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of menu | paginate: { itemsPerPage: 10, currentPage: pageNumber}">
+                        <td data-th="Name"><a class="item-name" routerLink="/client/menu/edit/{{item._id}}" >{{item.name}}</a></td>
+                        <td data-th="No of Options">{{item.options.length}}</td>
+                        <td data-th="No of Allergens">{{item.allergens.length}}</td>
+                        <td data-th="No of Blacklist Allergens">{{item.blacklistAllergens.length}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="content-footer">
+                <small>showing {{firstEntry}} to {{lastEntry}} of {{menu.length}} entries</small>
+                <div class="pagination-container">
+                    <pagination-controls #pagination (pageChange)="pageChanged($event)">
+                        <div class="custom-pagination">
+                            <div class="pagination-previous" [class.disabled]="pagination.isFirstPage()">
+                                <a (click)="pagination.isFirstPage()? null : pagination.previous()"> <i class="fa fa-arrow-left"></i></a>
+                            </div>
+
+                            <div class="pages" *ngFor="let page of pagination.pages" [class.current]="pagination.getCurrent() === page.value">
+                                <a (click)="pagination.setCurrent(page.value)" *ngIf="pagination.getCurrent() !== page.value">
+                                    <span>{{page.label}}</span>
+                                </a>
+                                <div *ngIf="pagination.getCurrent() === page.value">
+                                    <span>{{ page.label }}</span>
+                                </div>
+                            </div>
+
+                            <div class="pagination-next" [class.disabled]="pagination.isLastPage()" *ngIf="pagination.directionLinks">
+                                <a (click)="pagination.isLastPage()? null : pagination.next()"> <i class="fa fa-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </pagination-controls>
+                </div>
+            </div>
+        </md-card-content>
+    </md-card>
+</div>
