@@ -3,6 +3,12 @@ import { Routes, RouterModule, Route } from '@angular/router';
 
 import { ClientAppComponent } from './client-app.component';
 
+import { 
+    HomeContainerComponent,
+    TestComponent,
+    ProcessLinkComponent,
+    GreetingsComponent
+} from '../../container'
 
 // data resolvers
 
@@ -10,7 +16,43 @@ import { ClientAppComponent } from './client-app.component';
 // route guards
 
 const routes: Route[] = [
-
+    {
+        path: 'client',
+        component: ClientAppComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'home',
+                pathMatch: 'full'
+            },
+            {
+                path: 'home',
+                component: HomeContainerComponent,
+                data: {
+                    formMode: 'user'
+                }
+            },
+            {
+                path: 'verify/:token/:userId',
+                component: ProcessLinkComponent
+            },
+            {
+                path: 'test',
+                component: TestComponent
+            },
+            {
+                path: 'create-password',
+                component: HomeContainerComponent,
+                data: {
+                    formMode: 'password'
+                }
+            },
+            {
+                path: 'test-complete',
+                component: GreetingsComponent
+            }
+        ]
+    }
 ];
 
 @NgModule({

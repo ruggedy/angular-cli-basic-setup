@@ -8,8 +8,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$primary: md-palette($md-green);
-$accent:  md-palette($md-indigo);
+$primary: md-palette($md-weavee-blue, 900);
+$accent:  md-palette($md-weavee-blue, 500);
 
 // The warn palette is optional (defaults to red).
 $warn:    md-palette($md-red);

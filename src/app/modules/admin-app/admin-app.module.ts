@@ -19,7 +19,6 @@ import { AdminAppComponent } from './admin-app.component';
     ],
     declarations: [
         AdminAppComponent,
-        AdminHomeContainerComponent
     ]
 })
 export class AdminAppModule { }

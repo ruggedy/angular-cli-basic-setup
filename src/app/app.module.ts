@@ -21,16 +21,18 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { AdminAppModule } from './modules/admin-app/admin-app.module';
 
 // effects imports
-
+import { AuthEffects } from './effects/user';
 
 //  db schema
 
 // services 
-import { FormValidators } from './validators/form-validator';
 
+import { AuthService } from './services/auth.service';
+import { FormValidators } from './validators/form-validator';
 import { GrowlModule } from './vendorRefactors/growl';
 
 // data resolvers
+
 
 // route Guards
 
@@ -57,10 +59,12 @@ import { PipesModule } from './pipes';
 		StoreModule.provideStore(reducer),
 		HttpModule,
 		RouterStoreModule.connectRouter(),
-		StoreDevtoolsModule.instrumentOnlyWithExtension()
+		StoreDevtoolsModule.instrumentOnlyWithExtension(),
+        EffectsModule.run(AuthEffects)
 	],
 	providers: [ 
-      
+        AuthService,
+        FormValidators
     ],
 	bootstrap: [AppComponent]
 })

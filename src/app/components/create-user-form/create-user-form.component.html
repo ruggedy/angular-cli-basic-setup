@@ -1,0 +1,9 @@
+<div class="main-container">
+    <md-toolbar class="full-width" color="primary">{{title}}</md-toolbar>
+    <form class="full-width" [formGroup]="form" (ngSubmit)="handleFormSubmit(form)">
+        <md-input *ngIf="formMode === 'user'" placeholder="email" class="full-width" formControlName="email"></md-input>
+        <md-input *ngIf="formMode !== 'user'" placeholder="password" type="password" class="full-width" formControlName="password"></md-input>
+        <md-input *ngIf="formMode !== 'user'" placeholder="confirm password" type="password" class="full-width" formControlName="confirmPassword"></md-input>
+        <div class="button-container"><button md-raised-button type="submit" color="primary">Submit</button></div>
+    </form>
+</div>

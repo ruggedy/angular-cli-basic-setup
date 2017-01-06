@@ -8,16 +8,12 @@ import { RoutingModule } from './client-app.routes';
 import { SharedModule, AccordionModule } from 'primeng/primeng';
 import { Ng2PaginationModule } from 'ng2-pagination';
 
-
 import { 
-    MenuContainerComponent,   
-    HomeContainerComponent, 
-    MenuShowContainerComponent,
-    MenuFullCardListComponent,
-    MenuEditContainerComponent,
-    UserProfileContainerComponent,
-    CategoryContainerComponent
-} from '../../container';
+    HomeContainerComponent,
+    TestComponent,
+    ProcessLinkComponent,
+    GreetingsComponent
+} from '../../container'
 
 @NgModule({
   imports: [
@@ -33,13 +29,10 @@ import {
   ],
   declarations: [
     ClientAppComponent,
-    MenuContainerComponent,
     HomeContainerComponent,
-    MenuShowContainerComponent,
-    MenuFullCardListComponent,
-    MenuEditContainerComponent,
-    UserProfileContainerComponent,
-    CategoryContainerComponent
+    TestComponent,
+    ProcessLinkComponent,
+    GreetingsComponent
   ]
 })
 export class ClientAppModule { }

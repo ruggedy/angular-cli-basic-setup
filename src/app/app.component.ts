@@ -13,10 +13,8 @@ import * as fromRoot from './reducers';
 })
 export class AppComponent {
   title = 'app works!';
-  
-  msg$: Observable<Array<Message>>;
 
   constructor(private store: Store<fromRoot.State>) {
-      this.msg$ = store.select(fromRoot.getMessages);
+      
   }
 }
